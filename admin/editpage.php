@@ -1,4 +1,20 @@
 <?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
+if(!isset($_GET['p']))
+{
+    header('location:./');
+    exit();
+}
+if(isset($_POST['submit']))
+{
+    $id=mysql_real_escape_string($_POST['pageID']);
+    $title=mysql_real_escape_string($_POST['title']);
+    $content=mysql_real_escape_string($_POST['content']);
+    
+    $sql="update pages set pageTitle='$title' , pageCont='$content' where pageID='$id'";
+    mysql_query($sql) or die("query failed ".mysql_error());
+    header('location:./');
+    exit();
+}
 ?>
 <!DOCTYPE HTML>
 <html>
