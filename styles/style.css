@@ -63,3 +63,13 @@ a
     color:#2d67a7;
     background-color: inherit;
 }
+
+label
+{
+    
+	float:left;
+	font-weight:bold;
+	margin-right:10px;
+	width:80px;
+}
+}
