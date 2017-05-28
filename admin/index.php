@@ -4,6 +4,10 @@ if(!isLoggedin())
     header('location:./login.php');
     exit();
 }
+if(isset($_GET['logout']))
+{
+    logout();
+}
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -28,7 +32,7 @@ function delPage(id,title)
 <div id="navigation">
 <ul class="menu">
 <li><a href="../" target="_blank">view webiste</a></li>
-<li><a href="./logout.php">logout</a></li>
+<li><a href="./?logout">logout</a></li>
 </ul>
 </div>
 

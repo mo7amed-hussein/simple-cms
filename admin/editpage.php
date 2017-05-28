@@ -4,6 +4,10 @@ if(!isLoggedin())
     header('location:./login.php');
     exit();
 }
+if(isset($_GET['logout']))
+{
+    logout();
+}
 
 if(!isset($_GET['p']))
 {

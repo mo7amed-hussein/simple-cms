@@ -6,6 +6,11 @@ if(!isLoggedin())
     exit();
 }
 
+if(isset($_GET['logout']))
+{
+    logout();
+}
+
 if(isset($_POST['submit']))
 {
     $title=mysql_real_escape_string($_POST['title']);
