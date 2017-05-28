@@ -28,7 +28,25 @@ while($row=mysql_fetch_object($result))
 </ul>
 </div>
 
-<div id="content">content</div>
+<div id="content">
+<?php
+if(isset($_GET['p']))
+{
+    $id=$_GET['p'];
+    
+    $id=mysql_real_escape_string($id);
+    
+   $sql="select *from pages where pageID='$id'"; 
+} 
+else
+{
+    $sql="select *from pages where pageID='1'"; 
+}
+$result=mysql_query($sql)or die("query failed ".mysql_error()); 
+$row=mysql_fetch_object($result);
+echo"$row->pageCont";
+?>
+</div>
 <div id="footer">footer</div>
 </div>
 </body>
