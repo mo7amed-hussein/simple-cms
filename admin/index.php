@@ -43,7 +43,7 @@ while($row=mysql_fetch_object($result))
     }
     else
     {
-      echo'<td> <a href="editpage.php?p='.$row->pageID.'">edit</a></td>';  
+      echo"<td> <a href=\"editpage.php?p=$row->pageID\">edit</a> | <a href=\"javascript:delPage('$row->pageID','$row->pageTitle');\">delete</a></td>";  
     }
     
 }
