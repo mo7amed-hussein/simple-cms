@@ -60,4 +60,15 @@
   }
  
  
+ /**
+  * user log out 
+  * */
+  function logout()
+  {
+    //clear authorized session variabel 
+    unset($_SESSION['authorized']);
+    //redirect to login page
+    header('location:../admin/login.php');
+  }
+  
 ?>
