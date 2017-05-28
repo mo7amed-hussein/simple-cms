@@ -1,4 +1,9 @@
 <?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
+if(isLoggedin())
+{
+    header('location:./');
+    exit();
+}
 if(isset($_POST['submit']))
 {
     $username=mysql_real_escape_string($_POST['username']);

@@ -1,4 +1,10 @@
 <?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
+if(!isLoggedin())
+{
+    header('location:./login.php');
+    exit();
+}
+
 if(isset($_GET['p']))
 {
     $id=$_GET['p'];

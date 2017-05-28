@@ -1,5 +1,11 @@
 <?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
 
+if(!isLoggedin())
+{
+    header('location:./login.php');
+    exit();
+}
+
 if(isset($_POST['submit']))
 {
     $title=mysql_real_escape_string($_POST['title']);
