@@ -20,15 +20,6 @@ if(isset($_POST['submit']))
 	<title>Admin Panel</title>
 </head>
 <link rel="stylesheet" type="text/css" href="../styles/style.css" />
-<script lang="javascript" type="text/javascript">
-function delPage(id,title)
-{
-    if(confirm("are you sure you want to delete '"+title+"'"))
-    {
-        window.location.href='./delpage.php? p='+id;
-    }
-}
-</script>
 <body>
 <div id="wrapper">
 <div id="logo"><a href="./"><img src="../images/logo.png" alt=""/></a></div>
