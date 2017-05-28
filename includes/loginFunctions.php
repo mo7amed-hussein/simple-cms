@@ -41,4 +41,23 @@
      
  } 
  
+ /**
+  * check if user is logged in as member or not
+  * @return boolean true if logged or false if not
+  * */
+  
+  function isLoggedin()
+  {
+    //check session variable if it was set 
+    if( $_SESSION['authorized']==true)
+    {
+        return true;//logged in 
+    }
+    else 
+    {
+        return false;//not 
+    }   
+  }
+ 
+ 
 ?>
