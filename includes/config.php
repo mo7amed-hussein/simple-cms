@@ -5,6 +5,8 @@
  * @copyright 2017
  */
 
+//used for include check
+define("DBCONFIG",1);
 
 ob_start();
 
