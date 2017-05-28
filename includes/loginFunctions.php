@@ -49,7 +49,7 @@
   function isLoggedin()
   {
     //check session variable if it was set 
-    if( $_SESSION['authorized']==true)
+    if( isset($_SESSION['authorized']))
     {
         return true;//logged in 
     }
