@@ -1,4 +1,4 @@
-<?php require_once('../includes/loginFunctions.php');
+<?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -19,7 +19,27 @@
 </div>
 
 <div id="content">
-
+<table>
+<caption>website pages</caption>
+<tr><th>Title</th> <th>actions</th></tr>
+<?php
+$sql="select * from pages order by pageID";
+$result=mysql_query($sql) or die("query failed ".mysql_error());
+while($row=mysql_fetch_object($result))
+{
+    echo "<tr><td>$row->pageTitle</td>";
+    if($row->isRoot==0)
+    {
+        echo'<td> <a href="editpage.php?p='.$row->pageID.'">edit</a></td>';
+    }
+    else
+    {
+      echo'<td> <a href="editpage.php?p='.$row->pageID.'">edit</a></td>';  
+    }
+    
+}
+ ?>
+</table>
 </div>
 <div id="footer">Copyrights &copy; 2017 all rights reserved</div>
 </div>
