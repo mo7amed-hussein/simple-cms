@@ -55,3 +55,11 @@ body
 	background:#000;
 	margin-bottom:10px;
 }
+
+a 
+{
+    
+    text-decoration:none;
+    color:#2d67a7;
+    background-color: inherit;
+}
