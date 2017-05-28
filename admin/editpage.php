@@ -35,11 +35,17 @@ if(isset($_POST['submit']))
 </div>
 
 <div id="content">
+<?php
+    $id=mysql_real_escape_string($_GET['p']);  
+    $sql="select * from pages where pageID='$id'";
+    $result=mysql_query($sql) or die("query failed ".mysql_error());
+    $row=mysql_fetch_object($result);
+?>
 <form action="" method="post">
-<input type="hidden" name="pageID" value="" />
-<p><label><strong>Title </strong></label><input type="text" name="title" size="100"/></p>
+<input type="hidden" name="pageID" value="<?php echo "$row->pageID";?>" />
+<p><label><strong>Title </strong></label><input type="text" name="title" size="100" value="<?php echo"$row->pageTitle";?>"/></p>
 <label><strong>Content</strong></label>
-<p><textarea rows="20" cols="100" name="content"></textarea></p>
+<p><textarea rows="20" cols="100" name="content" ><?php echo "$row->pageCont";?></textarea></p>
 <input type="submit" name="submit" value="update" class="button"/> 
 </form>
 </div>
