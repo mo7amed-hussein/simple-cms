@@ -71,4 +71,17 @@
     header('location:../admin/login.php');
   }
   
+  /**
+   * output any message in messages buffer to the user
+   * */
+   function printMessages()
+   {
+    //check if messages buffer contain any values
+    if(isset($_SESSION['msg']))
+    {
+        echo "{$_SESSION['msg']}";
+        unset($_SESSION['msg']);
+    }
+   }
+  
 ?>
