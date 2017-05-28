@@ -1,11 +1,39 @@
 body
 {
     margin:0;
-    font-size: 80%;
+    font-size: 100%;
 }
 
 #wrapper
 {
     margin: auto;
     width:960px;
+}
+
+#navigation
+{
+    background:#ddd;
+    height: 40px;
+}
+
+.menu
+{
+    padding:0;
+    float: left; 
+    margin-bottom: 1em;  
+}
+
+.menu a
+{
+    text-decoration: none;
+    color:#000;
+}
+.menu li 
+{
+    display:inline;
+    padding: 2px;
+}
+.menu a:hover
+{
+    color:#676767;
 }
