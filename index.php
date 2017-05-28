@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="styles/style.css" />
 <body>
 <div id="wrapper">
-<div id="logo">logo</div>
+<div id="logo"><a href="./"><img src="images/logo.png" alt=""/></a></div>
 <div id="navigation">navigation</div>
 <div id="content">content</div>
 <div id="footer">footer</div>
