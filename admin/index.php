@@ -57,7 +57,7 @@ while($row=mysql_fetch_object($result))
     
 }
  ?>
- <tfoot><td><a href="./addpage.php"> + add page</a></td></tfoot>
+ <tfoot><td colspan="2"><a href="./addpage.php"> + add page</a></td></tfoot>
 </table>
 </div>
 <div id="footer">Copyrights &copy; 2017 all rights reserved</div>
