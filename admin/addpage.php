@@ -1,4 +1,16 @@
 <?php require_once('../includes/config.php'); require_once('../includes/loginFunctions.php');
+
+if(isset($_POST['submit']))
+{
+    $title=mysql_real_escape_string($_POST['title']);
+    $content=mysql_real_escape_string($_POST['content']);
+    
+    $sql="insert into pages (pageTitle,pageCont)values('$title','$content')";
+    mysql_query($sql) or die("query failed ".mysql_error());
+    header('location:./');
+    exit();
+    
+}
 ?>
 <!DOCTYPE HTML>
 <html>
