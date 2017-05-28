@@ -28,6 +28,12 @@ function delPage(id,title)
 </div>
 
 <div id="content">
+<form action="" method="post">
+<p><label><strong>Title </strong></label><input type="text" name="title" size="100"/></p>
+<label><strong>Content</strong></label>
+<p><textarea rows="20" cols="100" name="content"></textarea></p>
+<input type="submit" name="submit" value="add page" class="button"/> 
+</form>
 </div>
 <div id="footer">Copyrights &copy; 2017 all rights reserved</div>
 </div>
