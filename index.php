@@ -47,7 +47,7 @@ $row=mysql_fetch_object($result);
 echo"$row->pageCont";
 ?>
 </div>
-<div id="footer">footer</div>
+<div id="footer">Copyrights &copy; 2017 all rights reserved</div>
 </div>
 </body>
 </html>
