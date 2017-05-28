@@ -29,7 +29,7 @@ if(isset($_POST['submit']))
 <div id="logo"><a href="./"><img src="../images/logo.png" alt=""/></a></div>
 <div id="navigation">
 <ul class="menu">
-<li><a href="../" >view webiste</a></li>
+<li><a href="../" target="_blank">view webiste</a></li>
 <li><a href="./?logout">logout</a></li>
 </ul>
 </div>
