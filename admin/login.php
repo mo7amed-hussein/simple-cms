@@ -24,12 +24,14 @@ if(isset($_POST['submit']))
 <div id="wrapper">
 <div id="logo"><a href="./"><img src="../images/logo.png" alt=""/></a></div>
 <div id="content">
+<div id="login">
 <p> <?php echo printMessages();?></p>
 <form action="" method="post">
 <p><label><strong>UserName: </strong></label> <input type="text" name="username"  size="50"/></p>
 <p><label><strong>Password: </strong></label> <input type="password" name="password"  size="50"/></p>
 <input type="submit" name="submit" value="login" />
 </form>
+</div>
 </div>
 <div id="footer">Copyrights &copy; 2017 all rights reserved</div>
 </div>
